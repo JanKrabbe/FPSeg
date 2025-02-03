@@ -1,0 +1,21 @@
+# Dataset Configuration
+data_root: /root/datasets/cityscapes # Root directory for the dataset
+image_size: [1024, 1024] # Images are resized to this size before they are used. In FPSeg the images are resized to (1024,1024) since this improved the results. Change this value to [0, 0] if you don't want to resive the images.
+splits: [train, test, val] # Decides for which split of the dataset the embeddings are calculated. Can cointain: train, train_extra, test, val
+
+# Test Model Configuration
+encoder: mobilesam # SAM image encoder to use: default, vit_h, vit_l, vit_b, mobilesam
+checkpoint: weights/mobile_sam.pt # Path to pretrained weights for the image encoder
+
+# Runtime Configuration
+image_embedding_dir: image_embeddings_mobilesam # Directory name in data_root where embeddings are saved
+
+
+
+
+
+
+
+
+
+

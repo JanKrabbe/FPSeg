@@ -1,0 +1,14 @@
+# Runtime Configuration
+onnx_file: ./output/onnx/fpseg_ps64_mobilesam.onnx # Filename of ONNX model
+output_dir: ./output/trt # Directory for exported TensorRT file
+
+
+
+
+
+
+
+
+
+
+

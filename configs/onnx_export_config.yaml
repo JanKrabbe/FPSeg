@@ -1,0 +1,23 @@
+# Dataset Configuration
+data_root: /root/datasets/cityscapes # Root directory for the dataset
+target_size: [1024, 1024] # Image and mask (target) size during training
+
+# Model Configuration
+encoder: mobilesam # SAM encoder to use: default, vit_h, vit_l, vit_b, mobilesam
+checkpoint: weights/fpseg_mobilesam_distilled.pth # Path to pretrained FPSeg weights
+n_classes: 33 # Number of classes. 33 classes in CityscapesClasswise dataset (Cityscapes Classes and Categories)
+prompt_size: 64 # Size of the prompt (embedding) for each class
+
+# Runtime Configuration
+output_dir: ./output/onnx # Directory for exported ONNX model file
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+# Dataset Configuration
+data_root: /root/datasets/cityscapes # Root directory for the dataset
+image_embedding_dir: image_embeddings_mobilesam # Image embedding folder inside data_root. Make sure to use the right embeddings for the encoder that should be used!
+p_neg_max: 0.2 # Maximum probability for sampling negative images (with empty mask)
+test_n_class_examples_per_epoch: 500 # Number of images per class in testing to reduce variance since testing is only one epoch
+batch_size: 64 # Number of samples per batch
+
+# Test Model Configuration
+encoder: mobilesam # SAM encoder to use: default, vit_h, vit_l, vit_b, mobilesam
+checkpoint: weights/fpseg_mobilesam.pth # Path to pretrained weights that are to be evaluated. Can be a TensorRT File.
+n_classes: 33 # Number of classes. 33 classes in CityscapesClasswise dataset (Cityscapes Classes and Categories)
+prompt_size: 64 # Size of the prompt (embedding) for each class
+
+# Runtime Configuration
+num_workers: 16 # Number of CPU workers for data loading (reduce if necessary)
+
+
+
+
+
+
+
+
+
+
+

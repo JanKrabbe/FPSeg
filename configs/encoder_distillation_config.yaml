@@ -1,0 +1,33 @@
+# Dataset Configuration
+data_root: /root/datasets/cityscapes # Root directory for the dataset
+target_size: [1024, 1024] # Image and mask (target) size during training
+
+
+# Model Configuration
+checkpoint: weights/fpseg_mobilesam_distilled.pth # Path to pretrained FPSeg weights
+n_classes: 33 # Number of classes. 33 classes in CityscapesClasswise dataset (Cityscapes Classes and Categories)
+prompt_size: 64 # Size of the prompt (embedding) for each class
+
+
+# Training Parameters
+batch_size: 16 # Number of samples per batch
+learning_rate: 0.001 # Learning rate
+n_epochs: 200 # Number of training epochs
+
+
+# Runtime Configuration
+num_workers: 32 # Number of CPU workers for data loading (reduce if necessary)
+log_dir: ./output/distill # Directory for saving logs
+train_log_interval: 10 # Logging interval during training (in batches/optimization steps)
+test_interval: 5 # Interval for testing/validation (in epochs)
+save_checkpoint: True # Save the best model checkpoint, can be huge with SAM image encoder
+
+
+
+
+
+
+
+
+
+

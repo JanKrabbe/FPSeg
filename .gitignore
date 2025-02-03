@@ -1,0 +1,8 @@
+*.pyc
+*.pyo
+*.pyd
+__py
+**/__pycache__/
+.vscode/
+output/
+*.egg-info/

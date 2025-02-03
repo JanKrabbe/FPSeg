@@ -1,0 +1,9 @@
+# Model Configuration
+encoder: mobilesam # SAM encoder to use: default, vit_h, vit_l, vit_b, mobilesam
+trt_file: None # Only the TensorRT model is benchmarked if file is provided (encoder choice is ignored). In this case n_classes and prompt_size need to match the used model
+n_classes: 19 # Number of classes. 33 classes in CityscapesClasswise dataset (Cityscapes Classes and Categories), 19 classes used in Citryscapes evaluation
+prompt_size: 32 # Size of the prompt (embedding) for each class
+
+# Runtime Configuration
+n_warmup: 50 # Defines number of warmup iterations
+n_runs: 50 # Defines how often timing is repeated
