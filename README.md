@@ -2,7 +2,7 @@
 
 **[ISCAS2024 Paper](https://ieeexplore.ieee.org/document/10558203)**
 
-FPSeg is designed for **flexible semantic segmentation**, espacially for edge devices with limited computational resources. It enables a **trade-off between inference speed and accuracy**. The model leverages segmentation foundation models ([SAM](https://github.com/facebookresearch/segment-anything) and [MobileSAM](https://github.com/ChaoningZhang/MobileSAM)) and prompt tuning to:  
+FPSeg is designed for **flexible semantic segmentation**, especially for edge devices with limited computational resources. It enables a **trade-off between inference speed and accuracy**. The model leverages segmentation foundation models ([SAM](https://github.com/facebookresearch/segment-anything) and [MobileSAM](https://github.com/ChaoningZhang/MobileSAM)) and prompt tuning to:  
 
 - **Prioritize important classes for faster inference**  
 - **Change the number of segmented classes when needed**  
@@ -28,14 +28,14 @@ git clone git@github.com:JanKrabbe/FPSeg.git
 cd fpseg; pip install -e .
 ```
 
-For using the TensorRT optimization additional dependencies are requiered that can be installed with:
+For using the TensorRT optimization additional dependencies are required that can be installed with:
 ```
 cd fpseg; pip install -e .[all]
 ```
 
 ## Dataset
 
-To use the code the [Cityscapes](https://www.cityscapes-dataset.com/) is needed. Follow these intructions to prepare the necessary files: 
+To use the code the [Cityscapes](https://www.cityscapes-dataset.com/) is needed. Follow these instructions to prepare the necessary files: 
 
 https://github.com/mcordts/cityscapesScripts
 
@@ -63,7 +63,7 @@ Can be used to train the FPSeg model i.e. tuning the prompt tokens and possibly 
 ```
 python tools/encoder_distillation.py
 ```
-Performes further knowledge distillation with the MobileSAM image encoder as student model and SAM image encoder as teacher model on the cityscapes dataset. When using the default config file, train logs and the weights (checkpoint) of the epoch with the lowest test MSE will be saved to `output/distill/`. Precomputed SAM image embeddings are needed to perform the distillation.
+Performs further knowledge distillation with the MobileSAM image encoder as student model and SAM image encoder as teacher model on the cityscapes dataset. When using the default config file, train logs and the weights (checkpoint) of the epoch with the lowest test MSE will be saved to `output/distill/`. Precomputed SAM image embeddings are needed to perform the distillation.
 
 ### Eval
 ```
